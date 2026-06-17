@@ -1,6 +1,6 @@
 /*
-  inner.path™ v0.15
-  Piloto privado · Sofia only.
+  inner.path™ v0.16
+  Piloto privado · Sofia only · S7 aberta.
 */
 
 const DEMO_SPOTIFY_EMBED = "https://open.spotify.com/embed/episode/3Y9dQJ8Y0ScYrPWWZCtoSS?utm_source=generator";
@@ -599,7 +599,7 @@ const SOFIA_SESSIONS = [
     baseNumber: 6,
     navCode: { pt: "S · 06", en: "S · 06" },
     timelineCode: "S6",
-    status: "current",
+    status: "done",
     dateLabel: { pt: "3 junho", en: "3 June" },
     title: { pt: "Amor Incondicional", en: "Unconditional Love" },
     subtitle: { pt: "futuro", en: "future" },
@@ -625,9 +625,49 @@ const SOFIA_SESSIONS = [
     }
   }),
   copySession(METHOD_SESSIONS[6], {
-    status: "locked",
+    status: "current",
     navCode: { pt: "S · 07", en: "S · 07" },
-    timelineCode: "S7"
+    timelineCode: "S7",
+    dateLabel: { pt: "sessão 7", en: "session 7" },
+    title: { pt: "Crenças", en: "Beliefs" },
+    subtitle: { pt: "confiança e resiliência", en: "trust and resilience" },
+    intent: { pt: "observar frases internas · reconhecer recursos · praticar uma nova resposta", en: "observe inner sentences · recognise resources · practise a new response" },
+    note: {
+      pt: "Esta semana é para observares, com curiosidade, as frases internas que aparecem quando estás a crescer, a escolher ou a sair da tua zona conhecida. Não é para te julgares. É para perceberes o que já está pronto para se reorganizar e que recursos já existem em ti.",
+      en: "This week is about observing, with curiosity, the inner sentences that appear when you are growing, choosing or moving beyond what feels familiar. This is not about judging yourself. It is about noticing what is ready to reorganise and which resources already exist within you."
+    },
+    tasks: {
+      pt: [
+        { title: "Quiz das 8 áreas", detail: "avaliar de 1 a 10 com honestidade e gentileza", type: "quiz" },
+        { title: "Observar a frase interna", detail: "notar que frase aparece mais vezes esta semana", type: "consciência" },
+        { title: "Evidência de confiança", detail: "registar uma pequena prova por dia", type: "diário" }
+      ],
+      en: [
+        { title: "8-area quiz", detail: "rate from 1 to 10 with honesty and kindness", type: "quiz" },
+        { title: "Observe the inner sentence", detail: "notice which sentence appears most often this week", type: "awareness" },
+        { title: "Evidence of trust", detail: "write one small proof each day", type: "journal" }
+      ]
+    },
+    journal: {
+      pt: [
+        "Que frase interna apareceu mais esta semana?",
+        "Em que momento consegui escolher com mais confiança, bondade ou amor próprio?",
+        "Que crença nova seria mais verdadeira e mais justa para mim?"
+      ],
+      en: [
+        "Which inner sentence appeared most this week?",
+        "In which moment did I choose with more trust, kindness or self-love?",
+        "Which new belief would be more true and fair to me?"
+      ]
+    },
+    extra: {
+      type: "quiz",
+      title: { pt: "8 Áreas de Resiliência", en: "8 Areas of Resilience" },
+      body: {
+        pt: "Avalia de 1 a 10: autocontrolo, autoconfiança, resiliência, empatia, optimismo, sentido de vida, autonomia e segurança interna. O objectivo não é ter tudo alto. É perceber que área está a pedir mais cuidado agora.",
+        en: "Rate from 1 to 10: self-control, self-confidence, resilience, empathy, optimism, meaning, autonomy and inner safety. The goal is not to score everything high. It is to notice which area is asking for more care now."
+      }
+    }
   }),
   copySession(METHOD_SESSIONS[7], {
     status: "locked",
@@ -656,7 +696,7 @@ const CLIENTS = [
     name: { pt: "Sofia", en: "Sofia" },
     initials: "sf",
     values: { pt: ["Confiança", "Bondade", "Amor Próprio"], en: ["Trust", "Kindness", "Self-Love"] },
-    activeSessionId: "sofia-06-amor",
+    activeSessionId: "base-07",
     sessions: SOFIA_SESSIONS
   }
 ];
@@ -668,7 +708,7 @@ const INNER_PATH_DATA = {
     subtitle: { pt: "o teu espaço entre sessões", en: "your space between sessions" }
   },
   app: {
-    version: "v0.15",
+    version: "v0.16",
     defaultLanguage: "pt",
     defaultClientId: "sofia-new-demo",
     previewLockedSessions: false
