@@ -1,5 +1,5 @@
 /*
-  inner.path™ v0.16
+  inner.path™ v0.18
   Piloto privado · Sofia only · S7 aberta.
 */
 
@@ -625,7 +625,7 @@ const SOFIA_SESSIONS = [
     }
   }),
   copySession(METHOD_SESSIONS[6], {
-    status: "current",
+    status: "done",
     navCode: { pt: "S · 07", en: "S · 07" },
     timelineCode: "S7",
     dateLabel: { pt: "sessão 7", en: "session 7" },
@@ -670,14 +670,56 @@ const SOFIA_SESSIONS = [
     }
   }),
   copySession(METHOD_SESSIONS[7], {
-    status: "locked",
+    status: "done",
     navCode: { pt: "S · 08", en: "S · 08" },
     timelineCode: "S8"
   }),
   copySession(METHOD_SESSIONS[8], {
-    status: "locked",
+    status: "current",
     navCode: { pt: "S · 09", en: "S · 09" },
-    timelineCode: "S9"
+    timelineCode: "S9",
+    dateLabel: { pt: "sessão 9", en: "session 9" },
+    title: { pt: "Continuidade", en: "Continuity" },
+    subtitle: { pt: "estrutura para continuar", en: "structure to continue" },
+    intent: { pt: "integrar o caminho feito · escolher ferramentas · criar uma estrutura simples para os próximos dias", en: "integrate the path covered · choose tools · create a simple structure for the next days" },
+    note: {
+      pt: "Esta semana é para reconhecer o caminho que já fizeste e escolher a estrutura que te ajuda a continuar. O objectivo é perceberes o que mudou, que ferramentas te apoiam mais e que pequenos sinais te mostram quando precisas de voltar a ti.",
+      en: "This week is about recognising the path you have already walked and choosing the structure that helps you continue. The aim is to notice what has changed, which tools support you most and which small signs show you when you need to come back to yourself."
+    },
+    tasks: {
+      pt: [
+        { title: "Rever o casulo", detail: "comparar o ponto inicial com o ponto actual", type: "casulo" },
+        { title: "Escolher ferramentas de continuidade", detail: "respiração, journaling, meditação ou tapping", type: "plano" },
+        { title: "Carta à nova fase", detail: "o que levo comigo e o que quero proteger", type: "carta" }
+      ],
+      en: [
+        { title: "Review the cocoon", detail: "compare the starting point with the current point", type: "cocoon" },
+        { title: "Choose continuity tools", detail: "breathing, journaling, meditation or tapping", type: "plan" },
+        { title: "Letter to the new phase", detail: "what I carry with me and what I want to protect", type: "letter" }
+      ]
+    },
+    journal: {
+      pt: [
+        "O que mudou em mim desde o início deste processo?",
+        "Que ferramenta me ajuda mais a voltar a mim?",
+        "Como percebo que estou a sair do meu centro?",
+        "Que estrutura interna quero proteger nos próximos 30 dias?"
+      ],
+      en: [
+        "What has changed in me since the beginning of this process?",
+        "Which tool helps me come back to myself the most?",
+        "How do I notice that I am moving away from my centre?",
+        "Which inner structure do I want to protect over the next 30 days?"
+      ]
+    },
+    extra: {
+      type: "continuity",
+      title: { pt: "Plano de Continuidade", en: "Continuity Plan" },
+      body: {
+        pt: "Escolhe uma estrutura simples para os próximos 30 dias: uma prática para regular, uma pergunta para escrever, um sinal de alerta e uma escolha pequena que te aproxime dos teus valores.",
+        en: "Choose a simple structure for the next 30 days: one practice to regulate, one question to write with, one warning sign and one small choice that brings you closer to your values."
+      }
+    }
   })
 ];
 
@@ -696,7 +738,7 @@ const CLIENTS = [
     name: { pt: "Sofia", en: "Sofia" },
     initials: "sf",
     values: { pt: ["Confiança", "Bondade", "Amor Próprio"], en: ["Trust", "Kindness", "Self-Love"] },
-    activeSessionId: "base-07",
+    activeSessionId: "base-09",
     sessions: SOFIA_SESSIONS
   }
 ];
@@ -708,7 +750,7 @@ const INNER_PATH_DATA = {
     subtitle: { pt: "o teu espaço entre sessões", en: "your space between sessions" }
   },
   app: {
-    version: "v0.16",
+    version: "v0.18",
     defaultLanguage: "pt",
     defaultClientId: "sofia-new-demo",
     previewLockedSessions: false
