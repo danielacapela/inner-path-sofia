@@ -1,6 +1,6 @@
 /*
-  inner.path™ v0.18
-  Piloto privado · Sofia only · S7 aberta.
+  inner.path™ v0.19
+  Piloto privado · Sofia only · S9 actual · S8 EL6.
 */
 
 const DEMO_SPOTIFY_EMBED = "https://open.spotify.com/embed/episode/3Y9dQJ8Y0ScYrPWWZCtoSS?utm_source=generator";
@@ -669,17 +669,76 @@ const SOFIA_SESSIONS = [
       }
     }
   }),
-  copySession(METHOD_SESSIONS[7], {
+  copySession(METHOD_SESSIONS[6], {
     status: "done",
     navCode: { pt: "S · 08", en: "S · 08" },
-    timelineCode: "S8"
+    timelineCode: "S8",
+    dateLabel: { pt: "sessão 8", en: "session 8" },
+    title: { pt: "Enquadramento", en: "Framework" },
+    subtitle: { pt: "8 modelos de crenças", en: "8 belief models" },
+    intent: { pt: "compreender recursos internos · autoconfiança · leitura corporal · sentido de vida", en: "understand inner resources · self-confidence · body reading · meaning" },
+    sessionMemory: {
+      pt: ["EL6 · enquadramento", "8 modelos de crenças determinantes", "autocontrolo · autoconfiança · resiliência", "leitura corporal · empatia · optimismo · sentido de vida"],
+      en: ["EL6 · framework", "8 determining belief models", "self-control · self-confidence · resilience", "body reading · empathy · optimism · meaning"]
+    },
+    note: {
+      pt: "Esta sessão trouxe mais clareza sobre os recursos que já existem em ti e sobre as áreas que estão a crescer. Esta semana é para observares com curiosidade: onde tens mais força, onde precisas de mais apoio e que pequenas escolhas te ajudam a voltar à confiança, à bondade e ao amor próprio.",
+      en: "This session brought more clarity to the resources that already exist within you and to the areas that are growing. This week is about observing with curiosity: where you feel stronger, where you need more support and which small choices help you return to trust, kindness and self-love."
+    },
+    tasks: {
+      pt: [
+        { title: "Rever os 8 modelos", detail: "observar quais estão mais fortes e quais pedem cuidado", type: "quiz" },
+        { title: "Leitura corporal", detail: "notar como o corpo reage antes da mente explicar", type: "corpo" },
+        { title: "Evidência de confiança", detail: "registar uma pequena prova de crescimento", type: "diário" }
+      ],
+      en: [
+        { title: "Review the 8 models", detail: "notice which feel stronger and which ask for care", type: "quiz" },
+        { title: "Body reading", detail: "notice how the body reacts before the mind explains", type: "body" },
+        { title: "Evidence of trust", detail: "write one small proof of growth", type: "journal" }
+      ]
+    },
+    audio: null,
+    sensations: {
+      pt: [
+        { title: "mais consciência", detail: "começas a perceber melhor os teus recursos internos" },
+        { title: "clareza no corpo", detail: "o corpo mostra sinais antes da mente organizar tudo" },
+        { title: "confiança em construção", detail: "pequenas evidências começam a ganhar mais valor" }
+      ],
+      en: [
+        { title: "more awareness", detail: "you begin to understand your inner resources more clearly" },
+        { title: "clarity in the body", detail: "the body shows signs before the mind organises everything" },
+        { title: "confidence being built", detail: "small evidence begins to matter more" }
+      ]
+    },
+    journal: {
+      pt: [
+        "Dos 8 modelos, qual sinto mais forte em mim neste momento?",
+        "Qual destes modelos está a pedir mais cuidado ou prática?",
+        "Que sinal do meu corpo me mostrou alguma coisa importante esta semana?",
+        "Que pequena evidência tenho de que estou a crescer?"
+      ],
+      en: [
+        "Of the 8 models, which one feels strongest in me right now?",
+        "Which of these models is asking for more care or practice?",
+        "Which body signal showed me something important this week?",
+        "What small evidence do I have that I am growing?"
+      ]
+    },
+    extra: {
+      type: "quiz",
+      title: { pt: "8 Modelos de Crenças", en: "8 Belief Models" },
+      body: {
+        pt: "Observa de 1 a 10: autocontrolo, autoconfiança, resiliência, leitura corporal, empatia, conquistar e manter pessoas, optimismo e sentido de vida. O objectivo é perceber que recursos estão mais presentes e quais precisam de mais cuidado agora.",
+        en: "Observe from 1 to 10: self-control, self-confidence, resilience, body reading, empathy, connecting and maintaining relationships, optimism and meaning in life. The aim is to notice which resources are more present and which need more care now."
+      }
+    }
   }),
   copySession(METHOD_SESSIONS[8], {
     status: "current",
     navCode: { pt: "S · 09", en: "S · 09" },
     timelineCode: "S9",
     dateLabel: { pt: "sessão 9", en: "session 9" },
-    title: { pt: "Continuidade", en: "Continuity" },
+    title: { pt: "Integração", en: "Integration" },
     subtitle: { pt: "estrutura para continuar", en: "structure to continue" },
     intent: { pt: "integrar o caminho feito · escolher ferramentas · criar uma estrutura simples para os próximos dias", en: "integrate the path covered · choose tools · create a simple structure for the next days" },
     note: {
@@ -750,7 +809,7 @@ const INNER_PATH_DATA = {
     subtitle: { pt: "o teu espaço entre sessões", en: "your space between sessions" }
   },
   app: {
-    version: "v0.18",
+    version: "v0.19",
     defaultLanguage: "pt",
     defaultClientId: "sofia-new-demo",
     previewLockedSessions: false
